@@ -7,8 +7,35 @@
 In Project 4, we wrote a program that creates [nonograms](https://en.wikipedia.org/wiki/Nonogram) from [binary images](https://en.wikipedia.org/wiki/Binary_image).
 For our final project, we will write a program that allows us to play those puzzles.
 
-Note: In order to run this program, one needs to install the correct version of JavaFX and add it to the build path when running the program.
+# Installing JavaFX
+***Note: In order to run this program, one needs to install the correct version of JavaFX and add it to the build path when running the program.***
+To do this, we need to download the version of JavaFX that matches your IDE's version. I used Eclipse IDE, and version 11 of Java on this project. 
 
+https://gluonhq.com/products/javafx/
+Go to the provided link, scroll down to "Downloads", and under it click *Include older versions*. Scroll down to find version 11, and make sure to download the **SDK** version of JavaFX. For this project, I used Windows version 11.0.2.
+
+After downloading JavaFX, extract the file to a location you can remember, and load up your IDE and import the provided code.
+
+After importing, right click the project name and go to *Build Path > Configure Build path*
+
+You should be brought up to a "Java Build Path" screen. Click "Classpath", and then on the right side of the window, click *Add Library*.
+Click "User Library" and then *Next*. Inside the User Library window, you should see "JavaFX11". If you do not see it, you will have to find the User Library manually. Click the JavaFX11 library and then *Finish*.
+
+After successfully adding the project to the build path, all of the errors inside the project will go away. In order to run the program without errors, you need to add the JavaFX into the VM arguments.  
+
+go to *Project 5 (Or the name you called the project) > src > edu.ou.cs2334.project5 > Main.Java*, and go to *Main.java > Run As > Run Configurations*.
+Inside the Run Configurations window, go to the Arguments tab.
+
+You should see "VM arguments", and in here, you should put --module-path "*Put the link to JavaFX lib file here" --add-modules javafx.controls,javafx.fxml
+For example, my VM arguments are: *--module-path "C:\Users\jacob\Desktop\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml*
+
+After adding the VM arguments, there should be a text box above that labeled "Program arguments". Inside of here, put 10 10 30. These values can be changed, and will create a Nonogram size of row size 10, column size 10, and cell size 30, respectively.
+
+After doing all of this, the program should successfully run. Go to *Main.java > Run As > Java Application* and the Nonogram view should open up. Larger monitors may have problems seeing the correct proportions of the nonogram, however, laptops should run the program perfectly fine since they have a normal size. 
+
+After loading the program, you can go to *Load* and then press puzzles, to load any already created puzzles and try to solve them.
+
+# Running the Program
 The program can run with zero or one command line argument. In both cases, a
 default puzzle file is loaded. You will need to modify your
 **Run Configuration** arguments to test out different cell sizes.
