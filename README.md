@@ -7,6 +7,8 @@
 In Project 4, we wrote a program that creates [nonograms](https://en.wikipedia.org/wiki/Nonogram) from [binary images](https://en.wikipedia.org/wiki/Binary_image).
 For our final project, we will write a program that allows us to play those puzzles.
 
+Note: In order to run this program, one needs to install the correct version of JavaFX and add it to the build path when running the program.
+
 The program can run with zero or one command line argument. In both cases, a
 default puzzle file is loaded. You will need to modify your
 **Run Configuration** arguments to test out different cell sizes.
